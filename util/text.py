@@ -18,8 +18,10 @@ class Alphabet(object):
     def label_from_string(self, string):
         assert False
 
-    def decode(self, labels):
-        return bytes(labels).decode('utf-8', errors='replace')
+    @staticmethod
+    def decode(labels):
+        # return bytes(labels).decode('utf-8', errors='replace')
+        return bytes(labels)
 
     def size(self):
         return self._size
